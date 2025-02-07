@@ -20,7 +20,8 @@ public class Solidrug {
             for(int y = 0; y < array[x].length; y++){
                 System.out.print(array[x][y]); 
             }
+            System.out.println(); 
         }
-        System.out.println(); 
+        
     }
 }
