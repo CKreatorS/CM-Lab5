@@ -10,17 +10,17 @@ public class Solidrug {
                 plain[x][y] = "🦀";
             }
         }
-
-        System.out.print(plain); 
+        print2d(plain); 
     }
     
 
-    public static void print2d(String plain[][]){
+    public static void print2d(String[][] array){
 
-        for(int x = 0; x < plain.length; x++){
-            for(int y = 0; y < plain[x].length; y++){
-                System.out.println(plain[x][y] + " "); 
+        for(int x = 0; x < array.length; x++){
+            for(int y = 0; y < array[x].length; y++){
+                System.out.print(array[x][y]); 
             }
         }
+        System.out.println(); 
     }
 }
