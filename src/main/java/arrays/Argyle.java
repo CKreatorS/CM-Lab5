@@ -7,20 +7,26 @@ public class Argyle {
 
         for(int x = 0; x < argyle.length; x++){
             for(int y = 0; y < argyle[x].length; y++){
+                // start by setting shell by default
+                argyle[x][y] = "🐚";
+
+                // draw diagonal
                 if (x == y) {
                     argyle[x][y] = "🦀";
                 }
-                else if (x + y == argyle.length - 1){
+                if (x + y == argyle.length - 1){
                     argyle[x][y] = "🦀";
                 }
-                else if(x <= argyle.length/2){
-                    argyle[x][argyle.length/2 + x] = "🦀";
-                    argyle[x][argyle.length/2 - x] = "🦀";
-                }
-                else {
-                    argyle[x][y] = "🐚";
-                }
             }
+        }
+        // cross is done - draw diamond
+        for(int x = 0; x < argyle.length/2 + 1; x++) {
+            argyle[x][argyle.length/2 + x] = "🦀";
+            argyle[x][argyle.length/2 - x] = "🦀";
+
+            // lower half
+           argyle[argyle.length - 1 - x][argyle.length/2 + x] = "🦀";
+           argyle[argyle.length - 1 - x][argyle.length/2 - x] = "🦀";
         }
         print2d(argyle);
     }
